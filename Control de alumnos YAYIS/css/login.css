@@ -1,0 +1,38 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #eee;	
+}
+
+.wrapper {	
+	border-radius: 4px;
+	box-shadow: 0px 2px 10px #d6d6d6;
+	margin: 100px auto;
+	width: 320px;
+}
+
+.form-signin {
+  max-width: 580px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+
+}
+
+input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+	  margin-bottom: 14px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+.error{
+	background-color:#d6d6d6;
+	color: #000000;
+	padding:5px;
+}

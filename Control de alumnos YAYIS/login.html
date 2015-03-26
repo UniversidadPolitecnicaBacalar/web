@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Login a base de datos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form class="form-signin" method = "POST" action = "php/procesar_login.php">       
+        <h2 class="form-signin-heading">Iniciar sesion</h2>
+          <input type="password" class="form-control" name="username" placeholder="Usuario" required="" autofocus="" />
+          <input type="password" class="form-control" name="password" placeholder="Contraseña" required=""/>      
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+          <button class="btn btn-lg btn-danger btn-block" type="reset">Restablecer</button>
+          
+    </form>
+          <button class = "btn btn-info btn-block"  onclick = "location='index.html'">Regresar al menu anterior</button> 
+  </div>
+</body>
+      <hr>
+        <footer>
+          <div class="container text-center">
+            <address>
+              <strong>Universidad Politecnica de Bacalar</strong><br>
+              Carretera Chetumal - Felipe Carrillo Puerto kilómetro 31<br>
+              C.P. 77930, Bacalar, Q.Roo.<br>
+              <p>Tel: (983) 83 4 23 40 y 83 4 23 68</p>
+            </address>
+
+      
+          </div>
+        </footer>
+				<script src="js/jquery.js"></script>
+				<script src="js/bootstrap.js"></script>
+        <script src="js/myjava.js"></script>
+</html>
