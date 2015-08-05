@@ -1,0 +1,118 @@
+/*
+ * define styles for linkselect plug-in
+ */
+a.linkselect-link,
+span.linkselect-disabled {
+	-khtml-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-moz-user-focus: ignore; 
+	-moz-user-input: disabled; 
+}
+
+a.linkselect-link span.linkselect-link-icon,
+span.linkselect-disabled span.linkselect-link-icon {
+	display: none;
+}
+
+a.linkselect-link:hover, a.linkselect-link-focus {
+	color: #fff !important;
+	background-color: #565770 !important;
+	outline: 1px solid #565770; /* prevent the link from being outlined */
+}
+
+a.linkselect-link-open {
+	outline: 0; /* prevent the link from being outlined */
+}
+
+span.linkselect-disabled {
+	filter: alpha(opacity=75);
+	-moz-opacity: 0.75;
+	opacity: 0.75;
+}
+
+.linkselect-container {
+	position: absolute;
+	/* this is required to correctly calculate the width of the container */
+	left: 0; top: 0;
+	display: none;
+	/* 
+	 * move the box up 3 pixels so that the title bar aligns with original anchor text, this 
+	 * should be adjusted according to the padding/margin differences between the two links 
+	 */
+	margin-top: -3px;
+	max-width: 500px;
+	z-index: 50000;
+}
+
+.linkselect-container .linkselect-title {
+	display: block;
+	background: #565770 url(../images/linkselect_bkgrd.png) no-repeat 100% 50% !important;
+	color: #fff !important;
+	padding-right: 20px !important;
+	white-space: nowrap;
+	font-size: 11px !important;
+	font-weight: bold !important;
+	line-height: 11px !important;
+
+	cursor: default;	
+	-khtml-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-moz-user-focus: ignore; 
+	-moz-user-input: disabled; 
+}
+
+.linkselect-container .linkselect-title.placeholder {
+	cursor: pointer;	
+}
+
+.linkselect-container .linkselect-title span {
+	display: block;
+	padding: 3px 4px;
+}
+
+.linkselect-container .linkselect-scrollable {
+	width: auto;
+	background-color: white;
+	border: 1px solid #565770;
+	margin: 0;
+	padding: 0px;
+	font-size: 11px;
+	text-align: left;
+	overflow: auto;
+	max-height: 216px;
+	clear: both;
+}
+
+.linkselect-container ul {
+	list-style-type: decimal !important;
+	margin: 0px;
+	padding: 0px;
+}
+
+.linkselect-container ul li.linkselect-selected { 
+	background-color: #cfcfea;
+}
+
+.linkselect-container ul li.linkselect-current { 
+	background-color: #a3a4bd;
+	color: #fff;
+}
+
+.linkselect-container ul li.placeholder { 
+	display: none;
+}
+
+.linkselect-container ul li {
+	display: block;
+	margin: 0;
+	padding: 2px;
+	font-size: 11px;
+	cursor: pointer;
+	-khtml-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-moz-user-focus: ignore; 
+	-moz-user-input: disabled; 
+}
