@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.css">
+      <link type="text/css" rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+
+
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+          <script>
+          $(document).on('ready', function() {
+            $('#button_showHide').on('mousedown', function(e) {
+              e.preventDefault();
+
+              var current = $(this).attr('action');
+
+              if (current == 'hide') {
+                $(this).removeClass('mdi-action-visibility').addClass('mdi-action-visibility-off').attr('action','show');
+              }
+            })
+          })
+        </script>
+        <script>
+          $(document).on('ready', function() {
+            $('#button_showHide').on('mouseup', function(e) {
+              e.preventDefault();
+
+              var current = $(this).attr('action');
+
+              if (current == 'show') {
+                $(this).removeClass('mdi-action-visibility-off').addClass('mdi-action-visibility').attr('action','hide');
+              }
+            })
+          })
+        </script>
+    </head>
+
+    <body>
+      <header>
+
+        <nav class = "top-nav">
+
+          <div class = "nav-wrapper blue darken-2">
+            
+            <a href="#" class = "brand-logo center"><i class = "mdi-communication-business"> Administracion</i></a>
+
+          </div>
+
+        </nav>
+
+      </header>   
+
+  <!-- main -->
+      <main>
+
+        <div id="index-banner" class="parallax-container">
+          <div class="section no-pad-bot">
+            <div class="container">
+              <br><br>
+              <h1 class="header center text-lighten-2"><br><br>Laguna de los 7 colores</h1>
+              <br><br>
+            </div>
+          </div>
+          <div class="parallax"><img src="images/bacalar2.jpg" alt="Unsplashed background img 1"></div>
+        </div>
+
+        <div class="section white">
+          <div class="row container">
+            <h2 class="header center">Bienvenido</h2>
+
+            <div class = "row center">
+              <a class="waves-effect blue btn-large" onclick = "abrirModal()"><i class="mdi-content-send right"></i>Acceso</a>
+            </div>
+
+
+
+            <!-- modal-->
+
+            <div id="login" class="modal">
+              <div class="modal-content">
+                <h3 class = "center-align">Acceso a cuenta</h3>
+                <form class = "col s12" id="acceso_cuenta" autocomplete="off">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <i class="mdi-action-account-circle prefix"></i>
+                      <input id="user" name = "username" type="text" class="validate" autofocus required>
+                      <label for="user">Usuario</label>
+                    </div>
+                    <div class="input-field col s5">
+                      <i class="mdi-communication-vpn-key prefix"></i>
+                      <input id="pass" name = "password" type="password" class="validate" required>
+                      <label for="pass">Contraseña</label>
+                    </div>
+                    <div class="input-field col s1">
+                      <a class="btn-floating tooltipped" data-tooltip="Mostrar/Ocultar" data-position="bottom"><i class="mdi-action-visibility small" id="button_showHide" action="hide"></i></a>
+                    </div>
+                  </div>
+                  <div class="row center">
+                    <div class="input-field col s12">
+                      <input name="acceso" type="radio" value = "2" id="Operacion" required/>
+                      <label for="Operacion">Operacion</label>
+                      <input name="acceso" type="radio" value = "1" id="Administrativo" required/>
+                      <label for="Administrativo">Administrativo</label>
+                    </div>
+                  </div>
+                  <div class="row center">
+                    <div class="input-field col s12">
+                      <button class="btn blue waves-light" id="boton_acceso">Entrar
+                        <i class="mdi-content-send right"></i>
+                      </button>
+                        <button class="btn waves-effect waves-light red" type="reset" onclick = "Materialize.toast('Borrando', 750)" name="action">Borrar
+                        <i class="mdi-content-undo right"></i>
+                      </button>
+
+
+                      <a href = "recuperar_password.html" class="btn-floating btn-large waves-effect waves-light green right tooltipped" data-position="top" data-delay="50" data-tooltip="¿Olvidaste tu contreseña?">
+                        <i class="mdi-action-report-problem"></i>
+                      </a>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- boton que servira para acceso de tareas rapidas
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+              <a class="btn-floating btn-large red">
+                <i class="large mdi-editor-mode-edit"></i>
+              </a>
+            <ul>
+              <li><a class="btn-floating red"><i class="large mdi-editor-insert-chart"></i></a></li>
+              <li><a class="btn-floating yellow darken-1"><i class="large mdi-editor-format-quote"></i></a></li>
+              <li><a class="btn-floating green"><i class="large mdi-editor-publish"></i></a></li>
+              <li><a class="btn-floating blue"><i class="large mdi-editor-attach-file"></i></a></li>
+            </ul>
+            </div>
+            boton que servira para acceso de tareas rapidas-->
+          </div>
+        </div>
+         <!-- main -->
+      </main>
+
+    <div id="index-banner" class="parallax-container">
+      <div class="section no-pad-bot">
+          <div class="container">
+            <br><br>
+            <h4 class="header center text-lighten-2"><br><br><br><br><br>Un lugar Magico para disfrutar</h4>
+            <br><br>
+          </div>
+      </div>
+        <div class="parallax"><img src="images/7675423.jpg" alt="Unsplashed background img 1"></div>
+    </div>
+
+    <!-- footer-->
+    <footer class="page-footer blue">
+
+          <div class="footer-copyright">
+            <div class="container">
+            Copyright © 2015 | Joel Nahim & Luis Enrique
+            <a class="grey-text text-lighten-4 right" href="https://www.facebook.com/Poliuva">&nbsp;&nbsp;Like</a>
+            <a class="grey-text text-lighten-4 right" href="https://www.facebook.com/Poliuva" target="_blank"><img src="images/facebook.svg" alt="facebook" id="fb"></a>
+            </div>
+          </div>
+    </footer>
+      <!-- end footer-->
+
+
+
+      <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="js/sweetalert.min.js"></script>
+
+      <!--parallax-->
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.parallax').parallax();
+        });
+      </script>
+      <!--modal-->
+      <script type="text/javascript">
+        function abrirModal(){
+         $('#login').openModal();
+        }
+      </script>
+
+      <!-- Mostrar Contraseña -->
+        <script>
+          var password = document.getElementById("pass");
+          var button = document.getElementById("button_showHide");
+
+          button.addEventListener("mousedown", function() {
+              password.setAttribute("type", "text");
+
+          });
+
+          button.addEventListener("mouseup", function() {
+            password.setAttribute("type", "password");
+          });
+        </script>
+
+      <!-- ================== -->
+
+      <script>   
+        $(function(){
+         $("#boton_acceso").click(function(){
+          var url = "php/procesar_login.php"; // El script a dónde se realizará la petición.
+            $.ajax({
+                   type: "POST",
+                   url: url,
+                   data: $("#acceso_cuenta").serialize(), // Adjuntar los campos del formulario enviado.
+                   success: function(data)
+                   {
+                      if(data == "Usuario no activo"){
+                        swal({   title: "Acceso",   text: data,   type: "error", confirmButtonText: "Ok!" });
+
+                      }
+                      else if(data == "Area incorrecta"){
+                        swal({   title: "Acceso",   text: data,   type: "error",   confirmButtonText: "Ok!" });
+                      }
+                      else if(data == "Contraseña incorrecta"){
+                        swal({   title: "Acceso",   text: data,   type: "error",   confirmButtonText: "Ok!" });
+                      }
+                      else if(data == "No existe usuario"){
+                        swal({   title: "Acceso",   text: data,   type: "error",   confirmButtonText: "Ok!" });
+                      }
+                      else if(data == "Administrativo"){
+                        setTimeout(function(){
+                          $(window).attr('location', 'php/administrativo.php');
+                        }, 100);
+                      }
+                      else if(data == "Operacion"){
+                        setTimeout(function(){
+                          $(window).attr('location', 'php/operacion.php');
+                        }, 100);
+                      }
+
+                   }
+
+                 });
+
+            return false; // Evitar ejecutar el submit del formulario.
+         });
+        });
+        </script>
+    </body>
+
+
+
+
+
+
+
+
+
+</html>
+        

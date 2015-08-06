@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Monstrar contrasena - Kiuvox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div>
+      <!-- caja de texto para la contrasena -->
+      Contrase&ntilde;a: <input type="password" id="contrasena" />
+      
+      <!-- checkbox que nos permite activar o desactivar la opcion -->
+      <input type="checkbox" id="mostrar_contrasena" title="clic para mostrar contraseña"/>
+    </div>
+ 
+    <script src="../jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function () {
+        /*
+         * Al hacer clic sobre el checkbox verificamos si esta activado o no
+         * y asi alternamos entre el tipo de input donde esta la contrasena
+         * entre text y password
+         */
+        $('#mostrar_contrasena').click(function () {
+          if ($('#mostrar_contrasena').is(':checked')) {
+            $('#contrasena').attr('type', 'text');
+          } else {
+            $('#contrasena').attr('type', 'password');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
