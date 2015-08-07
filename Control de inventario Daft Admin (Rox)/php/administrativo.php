@@ -104,7 +104,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso'])){
                 $nombreUsuario = $_SESSION['username'];
 
                 //$ruta = "../images/users/".$_SESSION['username'].".png";
-                $consultaId = mysql_query("SELECT rutaImagen FROM usuarios WHERE username = '$nombreUsuario'",$con) or die ("No se pudo encontrar usuario");
+                $consultaId = mysql_query("SELECT rutaImagen FROM usuarios WHERE username = '$nombreUsuario'",$con);
                 $arrayId = mysql_fetch_assoc($consultaId);
                 $ruta = $arrayId['rutaImagen'];
                 ?>
@@ -388,6 +388,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso'])){
             <div class="center"><i class="mdi-action-visibility btn2 disabled blue darken-2 large"></i><ul><li><a class="white-tex" href="#!" onclick="abrirAviso()"><h5 class="white-text">Aviso</h5></a></li></ul></div>
 
           </div>
+
           <div class="col l4 s12">
             <div class="center"><i class="mdi-action-settings btn2 disabled blue darken-2 large"></i><ul><li><a class="white-tex" href="#!" onclick="abrirFunciones()"><h5 class="white-text">Funciones</h5></a></li></ul></div>
           </div>
@@ -396,6 +397,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso'])){
             <div class="center"><i class="mdi-action-book btn2 disabled blue darken-2 large"></i><ul><li><a class="white-tex" href="#!" onclick="abrirCatalogos()"><h5 class="white-text">Catalogos</h5></a></li></ul></div>
           </div>
         </div>
+        
       </div>
       
       <div class="footer-copyright">

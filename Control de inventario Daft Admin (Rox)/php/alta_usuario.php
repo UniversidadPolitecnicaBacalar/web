@@ -15,7 +15,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso']) && isset($_SESSIO
 						isset($_POST['nombre']) 		&& !empty($_POST['nombre']) 		&&
 						isset($_POST['numero']) 		&& !empty($_POST['numero']) 		&&
 						isset($_POST['correo']) 		&& !empty($_POST['correo']) 		&&
-						isset($_POST['rfc']) 			&& !empty($_POST['rfc']) 			&&
 						isset($_POST['estado'])			&& !empty($_POST['estado']) 		&&
 						isset($_POST['direccion']) 		&& !empty($_POST['direccion']) 		&&
 						isset($_POST['colonia']) 		&& !empty($_POST['colonia']) 		&&
@@ -28,7 +27,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso']) && isset($_SESSIO
 		$password 	= $_POST['password'];
 		$acceso		= $_POST['acceso'];
 		$nombre 	= $_POST['nombre'];
-		$rfc 		= $_POST['rfc'];
 		$numero 	= $_POST['numero'];
 		$correo		= $_POST['correo'];
 		$estado 	= $_POST['estado'];
@@ -44,7 +42,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso']) && isset($_SESSIO
 
 		//se inserta el empleado
 		mysql_query("INSERT INTO empleados (nombre,
-														rfc, 
 														numero, 
 														correo,
 														estado,
@@ -52,7 +49,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso']) && isset($_SESSIO
 														colonia,
 														noExt,
 														ccp) VALUES (	'$nombre',
-																			'$rfc',
 																			'$numero',
 																			'$correo',
 																			'$estado',
@@ -62,7 +58,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso']) && isset($_SESSIO
 																			'$ccp')", $con) or die ("Correo electronico ya ocupado".mysql_error());
 		//agarra el id del empleado ingresado	
 		$empleadoInfo = mysql_query("SELECT Id_empleado FROM empleados WHERE nombre 	= '$nombre' 	AND
-																			rfc 		= '$rfc'		AND
 																			numero		= '$numero'		AND
 																			correo 		= '$correo'		AND
 																			estado		= '$estado'		AND
@@ -80,9 +75,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso']) && isset($_SESSIO
 		$carpDestino  = '../images/users/';
 
     	
-
-
-    		$srcfile='../images/users/generic/generic.png';
+    		$srcfile='../images/users/default/image_default.png';
 			$dstfile='../images/users/'.$archNombre.'.png';
 
 			copy($srcfile, $dstfile);
@@ -95,11 +88,13 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso']) && isset($_SESSIO
 											Id_area,
 											Id_empleado,
 											fechaAlta,
+											rutaImagen,
 											estatus) VALUES('$username',
 															'$pass',
 															'$acceso',
 															'$idUser',
 															'$fechaAlta',
+															'$dstfile',
 															1)", $con) or die ("Ya existe este usuario o correo electronico");
 
 

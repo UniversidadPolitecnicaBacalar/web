@@ -3,7 +3,7 @@
 
 	$user = "root";
 
-	$password = "";
+	$password = "root";
 
 	$database = "login";
 

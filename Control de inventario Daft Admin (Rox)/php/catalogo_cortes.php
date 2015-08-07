@@ -199,12 +199,12 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso'])){
               </ul>
             </div>
 
-
+      <div class="push"></div>
       </main>
     <!-- footer-->
-    <footer class="page-footer blue">
+    <footer class="page-footer blue darken-2">
 
-          <div class="footer-copyright">
+          <div class="footer-copyright pie">
             <div class="container">
             Copyright © 2015 | Joel Nahim & Luis Enrique
             <a class="grey-text text-lighten-4 right" href="https://www.facebook.com/Poliuva">&nbsp;&nbsp;Like</a>

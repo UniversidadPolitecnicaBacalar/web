@@ -509,7 +509,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso'])){
          <!-- main -->
       </main>
     <!-- footer-->
-    <footer class="page-footer blue">
+    <footer class="page-footer blue darken-2">
 
           <div class="footer-copyright pie">
             <div class="container">

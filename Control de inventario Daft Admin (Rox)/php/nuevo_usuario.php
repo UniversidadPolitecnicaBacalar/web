@@ -105,7 +105,6 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso']) && isset($_SESSIO
             <div class = "card-panel ">
               <span class = "black-text">
                 <h2 class="header center">Nuevo usuario</h2>
-                <p>Solo Uvipower puede por mientras, en trabajo final solo un superadmin podra</p>
               </span>
             </div>
           </div>
@@ -167,11 +166,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso']) && isset($_SESSIO
 
 
                           <div class="row">
-                            <div class="input-field col s6">
-                              <i class="mdi-av-subtitles prefix"></i>
-                              <input name = "rfc" maxlength="13" id="icon_prefix" type="text" class="validate" required>
-                              <label for="icon_prefix">RFC</label>
-                            </div>
+                            
 
                             <div class="input-field col s6">
                               <select class = "browser-default" name = "estado" required>
@@ -213,10 +208,8 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso']) && isset($_SESSIO
                             </div>
 
                             
-                          </div>
-
-                          <div class="row">
-                            <div class="input-field col s12">
+                          
+                            <div class="input-field col s6">
                               <i class="mdi-content-mail prefix"></i>
                               <input name = "correo" id="icon_prefix" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$" type="email" class="validate" required>
                               <label for="icon_prefix">Correo</label>
@@ -297,7 +290,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso']) && isset($_SESSIO
          <!-- main -->
       </main>
     <!-- footer-->
-    <footer class="page-footer blue">
+    <footer class="page-footer blue darken-2">
 
           <div class="footer-copyright">
             <div class="container">

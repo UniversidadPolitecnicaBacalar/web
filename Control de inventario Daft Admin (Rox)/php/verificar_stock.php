@@ -41,7 +41,12 @@ if($i = mysql_fetch_assoc($resultado2)){
 	while ($arrayResultado = mysql_fetch_assoc($resultado)) {
 		echo "<tr>";
 		echo "<td>".$arrayResultado["descripcion"]. "</td>";
-		echo "<td>".$arrayResultado["stock"]. "</td>";
+		if ($arrayResultado["stock"] != 0){
+			echo "<td>".$arrayResultado["stock"]. "</td>";
+		}else{
+			echo "<td> <p>Producto Agotado!!!</p> <img src='../images/error.svg' alt='agotado'></td>";
+		}
+		
 		echo "</tr>";
 
 			/*$cadena .= $arrayResultado['descripcion'];

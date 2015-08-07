@@ -15,7 +15,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso'])){
     <head>
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-
+      <link rel="stylesheet" href="../css/style.css">
       <link rel="stylesheet" type="text/css" href="../css/sweetalert.css">
 
       <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
@@ -32,8 +32,23 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso'])){
               
 
             <a href="#" class = "brand-logo center"><i class = "mdi-communication-vpn-key"></i></a>
-            
+            <ul class="right"><!-- Menu Cuenta de usuario -->
+                <?php
+                  include("conexion_login.php");
+                  $nombreUsuario = $_SESSION['username'];
 
+                  //$ruta = "../images/users/".$_SESSION['username'].".png";
+                  $consultaId = mysql_query("SELECT rutaImagen FROM usuarios WHERE username = '$nombreUsuario'",$con) or die ("No se pudo encontrar usuario");
+                  $arrayId = mysql_fetch_assoc($consultaId);
+                  $ruta = $arrayId['rutaImagen'];
+                ?>
+                <li><a class="dropdown-button tooltipped" data-tooltip="Cuenta" data-position="bottom" data-activates="dropdown1"><img src="<?php echo $ruta; ?>" alt="" class="circle left" width = "55px" height = "55px" id="imagenCuenta">&nbsp;&nbsp;<?php echo $_SESSION['username']?><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                <ul id='dropdown1' class='dropdown-content large'>
+                  <!--<li><a onclick="">Cambiar Imagen</a></li>-->
+                  <li><a onclick="abrirCambiarImagen()">Cambiar Imagen</a></li>
+                  <li><a onclick = "location='logout.php'">Cerrar Sesión</a></li>
+                </ul>
+            </ul>
             <ul id="nav-mobile" class="left">
             
               <li><a href = "<?php echo $_SESSION['acceso'];?>.php" ><i class = "mdi-navigation-arrow-back"></i></a></li>
@@ -144,11 +159,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso'])){
 
 
                           <div class="row">
-                            <div class="input-field col s6">
-                              <i class="mdi-av-subtitles prefix"></i>
-                              <input name = "rfc" maxlength="13" id="icon_prefix" value = "<?php echo $user['rfc']; ?>" type="text" class="validate" required>
-                              <label for="icon_prefix">RFC</label>
-                            </div>
+                            
 
                             <div class="input-field col s6">
                               <select class = "browser-default" name = "estado" required>
@@ -190,10 +201,8 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso'])){
                             </div>
 
                             
-                          </div>
-
-                          <div class="row">
-                            <div class="input-field col s12">
+                         
+                            <div class="input-field col s6">
                               <i class="mdi-communication-email prefix"></i>
                               <input name = "correo" id="icon_prefix" value = "<?php echo $user['correo']; ?>" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$" type="email" class="validate" required>
                               <label for="icon_prefix" >Correo</label>
@@ -276,8 +285,9 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso'])){
 
           <div class="footer-copyright">
             <div class="container">
-            © 2015 Materialize
-            <a class="grey-text text-lighten-4 right" href="#!">2015</a>
+            Copyright © 2015 | Joel Nahim & Luis Enrique
+        <a class="grey-text text-lighten-4 right" href="https://www.facebook.com/Poliuva" target="_blank">&nbsp;&nbsp;Like</a>
+        <a class="grey-text text-lighten-4 right" href="https://www.facebook.com/Poliuva" target="_blank"><img src="../images/facebook.svg" alt="facebook" id="fb"></a>
             </div>
           </div>
         </footer>

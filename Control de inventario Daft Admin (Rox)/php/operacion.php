@@ -309,49 +309,29 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso'])){
                 </form>
               </div>
             </div>
-
-
-
-
-
-
-
-         <!-- main -->
-      </main>
-    <!-- footer-->
-    <!--<footer class="page-footer blue">
-
-          <div class="footer-copyright">
-            <div class="container">
-            © 2015 Daft Admin
-            <a class="grey-text text-lighten-4 right" href="#!">2015</a>
+          
+          <!-- Modal nota-->
+          <div id="nota" class="modal">
+            <div class="modal-content center">
+                <i class="mdi-action-help large"></i><h5 class="black-text">INFO</h5>
+                <p>Usarios del area de operacion tiene restringido el acceso a varias paginas. Al intento de acceder, seran redireccionados a la pagina anterior. <br><br> ATT: ROX</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
             </div>
           </div>
-        </footer>-->
+         <!-- main -->
+      </main>
+
     <footer class="page-footer blue darken-2">
       <div class="container">
         <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Nota</h5>
-            <p class="grey-text text-lighten-4">Usarios del area de operacion tiene restringido el acceso a varias paginas.</p>
-            <p class="grey-text text-lighten-4">Paginas restringidas seran redireccionados a la pagina anterior.</p>
 
+          <div class="col l4 s12">
+            <i class="mdi-action-help btn2 disabled blue darken-2 small" id="imgNota"></i>
+            <div id="nota"><ul><li><a class="white-tex" href="#!" onclick="abrirNota()"><h5 class="white-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INFO</h5></a></li></ul></div>
+          </div>
 
-
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">Funciones</h5>
-            <ul>
-              <li><a class="white-text" href="corte.php">Corte de caja</a></li>
-              <li><a class="white-text" href="ingreso.php">Ingreso</a></li>
-            </ul>
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">Catalogos</h5>
-            <ul>
-              <li><a class="white-text" href="catalogo.php">Catalogo</a></li>
-            </ul>
-          </div>
         </div>
       </div>
       
@@ -493,9 +473,11 @@ if (isset($_SESSION['username']) && isset($_SESSION['acceso'])){
           $('#ModalAcerca').openModal();
         }function abrirCambiarImagen(){
           $('#ModalImagen').openModal();
+        }function abrirNota(){
+          $('#nota').openModal();
         }
-
       </script>
+
       <script>
         // Modernizr with SVG detection required. http://modernizr.com
         ;window.Modernizr=function(a,b,c){
