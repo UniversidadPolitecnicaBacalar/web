@@ -1,0 +1,68 @@
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+.material-icons.brown000{
+  color: #795548;
+}
+.input-field .prefix.active{
+	color: #795548;
+}
+.parallax-container1 {
+  position: relative;
+  overflow: hidden;
+  height: 200px; }
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+.retraso-1{
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	animation-delay: 1s;
+}
+.retraso-05{
+	-webkit-animation-delay: 0.5;
+	-o-animation-delay: 0.5;
+	animation-delay: 0.5;
+}
+.izquierda{
+	margin-left: 50px;
+}
+.chico{
+	font-size: 15px;
+}
+.mapa{
+	margin-top: 40px;
+}
+.google-maps{
+	position: relative;
+	padding-bottom: 75%; /*This is the aspect ratio*/
+	height: 0;
+	overflow: hidden;
+}
+.google-maps iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+.background{
+	background: url(../images/bg.jpg) no-repeat fixed;
+}
+.material-icons.white000{
+  color: white;
+}
+.justificado{
+	text-align: justify;
+}
+.centrado{
+	text-align: center;
+}
