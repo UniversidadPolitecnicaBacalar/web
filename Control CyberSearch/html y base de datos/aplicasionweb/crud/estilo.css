@@ -1,0 +1,96 @@
+
+html,body{
+	background-color: #7FBEEF;
+	background-size: 100%;
+	font-family: helvetica;
+	font-weight: lighter;
+}
+section#titulo{
+	position:absolute;
+	left: 30%;
+	top: 5%;
+	background: #58AAEF;
+	padding: 0.7em;
+	font-size: 1.7em;
+	border-radius: 5px;
+	width: 535px;
+
+	
+	
+}
+
+section#formulario{
+	position:absolute;
+	top: 85%;
+	left: 45%;
+	margin-left: -100px;
+	margin-top: -300px;
+	width: 400px;
+	min-height: 250px;
+	background: #238DDF;
+	overflow: hidden;
+	border-radius: 5px;
+
+}
+h1{
+    -webkit-text-fill-color: red;
+    -webkit-text-stroke: 1px black;
+	text-align: center;
+	margin:30px; 
+	float:left;
+	font-size: 1.5em;
+
+	}
+h2{
+	float: left;
+	margin:10px; 
+	float:left;
+	font-size: 1.0em;
+
+}
+img#logo{
+	max-width: 20%;
+	top: 85px;
+	left: 45px;
+    height: auto;
+    width:200px;
+    margin:5px; 
+    float:right;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px #E88B8B;
+	}
+img#logo1{
+	max-width: 20%;
+	top: 0%;
+	left: 45%;
+    height: auto;
+    width:200px;
+    margin:5px; 
+    float:;
+}
+
+img {
+    max-width: 30%;
+    height: auto;
+    width: auto/4;
+    margin:10px; 
+    float:right;
+}
+#boton{
+	position:absolute;
+	top: 200px;
+	left: 285px;
+}
+
+input[id="nombre"]{
+	width: 160px;
+	height: 20px;
+	margin-left: 15px;
+	margin-top: 10px;
+	padding-left: 10px;
+	font-size: 0.7em;
+	outline:none;
+	border: 0px;
+	background-color: #D0D0D0;
+	border-radius: 5px;
+}

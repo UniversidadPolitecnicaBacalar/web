@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Cyber cafe search</title>
+	<link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+<section id="titulo">
+	
+	<h1>SE@RCH CYBER CAFE</h1>
+	<marquee>BIENVENIDO</marquee>
+
+</section>
+	<section id ="formulario">
+		<img src="imagenes/search cyber.jpg">
+		<form action = "login.php" method = "POST">
+			<h2>USUARIO:
+			<input type="text" id="nombre"  placeholder="USUARIO" name="usuario" required="required"> </h2>
+			<h2>CONTRASEÑA:
+			<input type="password" id="nombre"  placeholder="CONTRASEÑA" name="pass" required="required"> </h2>
+			<input type="submit" id="boton" value="Entrar">	
+			<input type="button" value="Registrar" onClick=" window.location.href='crud/nuevo.php'" id="boton1">	
+	</section>
+</body>
+</html>

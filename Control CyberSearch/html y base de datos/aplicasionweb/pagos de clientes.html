@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cyber Cafe Search</title>
+	<link rel="stylesheet" href="css/pagos de clientes.css">
+</head>
+<body>
+    <section id="titulo">
+        <img src="imagenes/search cyber.jpg" id="imagen">
+        <img src="imagenes/search cyber.jpg" id="imagen1">
+        <h1>SE@RCH CYBER CAFE</h1>
+        <marquee>BIENVENIDO A SE@RCH CYBER CAFE</marquee>
+        
+        
+
+     </section>
+	<nav>
+    <ul>
+        <li><a href="gastos.html">Ingresos y Gastos diarios</a></li>
+        <li><a href="registro de cliente.html">Registros de clientes de intenet</a></li>
+        <li><a href="pagos de clientes.html">Pagos de clientes</a></li>
+        <li><a href="consulta.html">Consultas</a></li>
+        <li><a href="crud/index.php">usuarios</a></li>
+        <li><a href="cerrarSesion.php">Salir</a></li>
+            
+    </ul>
+    </nav>
+    <h2>pagos de clientes</h2>
+    <section id="formulario">
+        <img src="imagenes/search cyber.jpg" id="imagen2">
+        <p>OBED CASTILLO HERNANDEZ</p>
+        <p>RFC.CAH088224GJ6</p>
+        <p>CALLE 12 / 11 Y 13</p>
+        <p>COLONIA SOR JUANA INES DE LA CRUZ </p>
+
+    <form action = "guardapagosClientes.php" method = "POST">
+         <h3>Fecha:<input required type="DATE" id="Dia"  name="Fecha"></h3>
+          <h3>Nombre:<input required type="text" id="Dia" name="Nombre"></h3>
+        <h3>Domicilio:<input required type="text" id="" name="Domicilio"></h3>
+        <h3>Cantidad a pagar:<input required type="text" id="" name="Cantidad"></h3>
+        <h3>Proximo pago:<input required type="text" id="" name="Proximo pago"></h3>
+        <h3>Sello y firma de la empresa<textarea name="comentarios" id="comentarios" cols="50" rows="10"></textarea></h3>
+
+        <input type="submit" id="submit1" value="Guardar">
+        
+        
+    </form>
+    
+    </section>
+    
+    <footer>
+        <div id="define">
+            <p>Derechos reservados SE@RCH CYBER CAFE</p>
+        </div>
+    </footer>
+	
+</body>
+</html>

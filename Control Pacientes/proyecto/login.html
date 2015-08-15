@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Control</title>
+    <link rel="stylesheet" href="static/css/diseñoLogin.css"/>
+    <link rel="icon" type="image/png" href="static/imagenes/imss1.png"/>
+    <script src="windows/jquery/jquery-1.9.1.min.js"></script>
+    <script language="javascript">// <![CDATA[
+$(document).ready(function() {
+   // Esta primera parte crea un loader no es necesaria
+    $().ajaxStart(function() {
+        $('#loading').show();
+        $('#result').hide();
+    }).ajaxStop(function() {
+        $('#loading').hide();
+        $('#result').fadeIn('slow');
+    });
+
+  
+   // Interceptamos el evento submit
+    $('#login').submit(function() {
+  // Enviamos el formulario usando AJAX
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            // Mostramos un mensaje con la respuesta de PHP
+            success: function(data) {
+                $('#result').html(data);
+                console.log(data[5]);
+                if (data[5]=="M") {document.getElementById("login").reset();
+                alert('Usuario o Contraseña incorrecta');}
+                else{
+                    location.href='index.php';
+
+                }
+
+            }
+        })        
+        return false;
+    });
+    
+});
+
+
+
+</script>
+</head>
+<body>
+    
+    
+    <div id ="wrapper">
+    	<header>
+            <h1>CONTROL IMSS</h1>
+            <img id="logo"src="static/imagenes/imss.png">
+            <div id="cuadro">
+                <form method="post" id="login" name="login" action="checarlogin.php">
+                <label>Nombre</label><br>
+                <input type="text" id="nombre" name="usuario" placeholder="Usuario" required/><br>
+                <label>Contraseña</label><br>
+                <input type="password" id="password" name="contrasena" placeholder="Contraseña"required/><br>
+                <button class="miboton" type="submit">Iniciar Sesion</button>
+
+                </form>
+
+        
+                
+            </div>
+        </header>
+        
+    </div>
+</body>
+</html>

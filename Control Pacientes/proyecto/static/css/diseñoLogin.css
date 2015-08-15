@@ -1,0 +1,121 @@
+body {
+	background-color: #F7F1E2;
+	font-family: Arial,sans-serif;
+	color: #666;
+	font-size: 13px;
+}
+
+header{
+	background: #00796B;
+}
+
+#wrapper{
+	width: auto;
+	height: 400px;
+	margin-top: 100px;
+	margin-right: 100px;
+	margin-left: 100px;
+	background: #00796B;
+-webkit-box-shadow: 0px 0px 23px -2px rgba(0,0,0,0.75);
+
+-moz-box-shadow: 0px 0px 23px -2px rgba(0,0,0,0.75);
+
+box-shadow: 0px 0px 23px -2px rgba(0,0,0,0.75);
+}
+
+#logo{
+	width: 150px;
+	margin-left: 70px;
+	margin-top: -130px;
+}
+
+#cuadro{
+	text-align: center;
+	background: white;
+	width: 380px;
+	height: 200px;
+	margin-left: 390px;
+	margin-top: -50px;
+	-webkit-box-shadow: 0px 0px 23px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 23px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 23px -2px rgba(0,0,0,0.75);
+}
+
+header h1{
+	text-align: center;
+	padding-top: 70px;
+	color: white;
+	font-size: 70px;
+}
+
+input{
+	margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"]{
+	text-align: center;
+	width: 120px;
+	height: 25px;
+	margin-top: 10px;
+	font-size: 1.4em;
+	outline: none;
+	border: 0px;
+	background-color: #dcdcdc;
+	border-radius: 5px;
+
+}
+
+input#nombre:focus{
+	width: 170px;
+	-webkit-transition:width .5s;
+}
+
+input#password:focus{
+	width: 170px;
+	-webkit-transition:width .5s;
+}
+
+/*Diseño boton*/
+
+.miboton {
+    -moz-box-shadow: 0px 0px 9px -1px #000000;
+    -webkit-box-shadow: 0px 0px 9px -1px #000000;
+    box-shadow: 0px 0px 9px -1px #000000;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #009687), color-stop(1, #009687) );
+    background:-moz-linear-gradient( center top, #009687 5%, #009687 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#009687', endColorstr='#009687');
+    background-color:#009687;
+    -webkit-border-top-left-radius:0px;
+    -moz-border-radius-topleft:0px;
+    border-top-left-radius:0px;
+    -webkit-border-top-right-radius:0px;
+    -moz-border-radius-topright:0px;
+    border-top-right-radius:0px;
+    -webkit-border-bottom-right-radius:0px;
+    -moz-border-radius-bottomright:0px;
+    border-bottom-right-radius:0px;
+    -webkit-border-bottom-left-radius:0px;
+    -moz-border-radius-bottomleft:0px;
+    border-bottom-left-radius:0px;
+    text-indent:0;
+    border:1px solid #009687;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    font-style:normal;
+    height:30px;
+    line-height:30px;
+    width:200px;
+    text-decoration:none;
+    text-align:center;
+}
+.miboton:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #009687), color-stop(1, #009687) );
+    background:-moz-linear-gradient( center top, #009687 5%, #009687 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#009687', endColorstr='#009687');
+    background-color:#009687;
+}.miboton:active {
+    position:relative;
+    top:1px;
+}

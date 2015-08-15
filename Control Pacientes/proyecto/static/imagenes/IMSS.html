@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://localhost/proyecto/index.php# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+      <meta charset="UTF-8">
+       <title>IMSS</title>
+       <link rel="stylesheet" href="http://localhost/proyecto/static/css/dise%C3%B1o.css">
+       <script type="text/javascript" src="./IMSS_files/jquery-2.1.4.min.js"></script>
+       <link rel="icon" type="image/png" href="http://localhost/proyecto/static/imagenes/imss1.png">
+    <style type="text/css">body #grafica, body #grafica * {background:none fixed transparent left top no-repeat;border:none;bottom:auto;clear:none;cursor:auto;direction:ltr;display:block;float:none;font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Verdana,Arial,Helvetica,sans-serif;font-size:10px;font-size-adjust:none;font-stretch:normal;font-style:normal;font-variant:normal;font-weight:normal;layout-flow:horizontal;layout-grid:none;left:0px;letter-spacing:normal;line-break:normal;line-height:normal;list-style:disc outside none;margin:0px 0px 0px 0px;max-height:none;max-width:none;min-height:0px;min-width:0px;outline-color:invert;outline-style:none;outline-width:medium;overflow:visible;padding:0px;position:static;right:auto;text-align:left;text-decoration:none;text-indent:0px;text-shadow:none;text-transform:none;top:0px;vertical-align:baseline;visibility:visible;width:auto;word-spacing:normal;z-index:1;zoom:1;opacity:1;-webkit-animation: none;-moz-animation: none;-o-animation: none;-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow: none;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;}</style></head>
+    <body>
+      
+    <script>
+      function cargar(div, desde){
+        $(div).load(desde)
+      }
+
+
+    </script>
+    <div id="wrapper">
+      <header>
+        <div id="titulo1">
+          <h1>Seguridad y Solidaridad Social</h1>
+        </div>
+        <d id="hola">Bienvenido! BARG        <img id="logo" src="./IMSS_files/imss.png">
+      </d></header>
+    
+      <div id="menu">
+
+        <ul id="submenu">
+          <li><a id="menuAltas" href="./IMSS_files/IMSS.html" onclick="cargar(&#39;#contenedor&#39;,&#39;windows/altas.php&#39;);">Altas</a></li>
+          <li><a id="consultas" href="./IMSS_files/IMSS.html" onclick="cargar(&#39;#contenedor&#39;,&#39;windows/consulta.php&#39;)">Consultas y Modifiacion </a></li>
+          <li><a id="consultas" href="./IMSS_files/IMSS.html" onclick="cargar(&#39;#contenedor&#39;,&#39;windows/grafica/grafica.php&#39;)">Grafica </a></li>
+          <li><a id="usuarios" href="./IMSS_files/IMSS.html">Usuarios</a>
+            <ul>
+              <li><a id="consultas" href="./IMSS_files/IMSS.html" onclick="cargar(&#39;#contenedor&#39;,&#39;windows/registrar.html&#39;)">-Registro</a></li>
+              <li><a id="consultas" href="./IMSS_files/IMSS.html" onclick="cargar(&#39;#contenedor&#39;,&#39;windows/editarUsuario.php&#39;)">-Actualizar</a></li>
+              <li><a id="consultas" href="./IMSS_files/IMSS.html" onclick="cargar(&#39;#contenedor&#39;,&#39;windows/eliminar.php&#39;)">-Eliminar</a></li>
+            </ul>
+           </li>
+          <li><a id="consultas" href="http://localhost/proyecto/cerrarSesion.php">Salir</a></li>
+        </ul>
+      </div>
+      <div id="contenedor">	
+       <script type="text/javascript" src="./IMSS_files/jquery-2.1.4.min.js"></script>
+       <script type="text/javascript" src="./IMSS_files/jscharts.js"></script>
+    
+    <section>
+    	
+    	<div id="grafica"><canvas id="JSChart_grafica" width="616" height="321" style="width: 616px; height: 321px; position: relative;"></canvas><map name="map_JSChart_grafica" id="map_JSChart_grafica"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" width="616" height="321" usemap="#map_JSChart_grafica" style="border:0;position:absolute;left:328px;top:100px;clip:&#39;rect(0, 616px, 321px, 0)&#39;;filter:alpha(opacity=0);z-index:10;"></map><div style="position: relative; top: -321px;"><img width="77" height="19" src="data:image/png;base64,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" style="border:0; height: auto;"></div></div>
+
+ <script type="text/javascript">
+
+ 	var altas= 10;
+ 	var depuracion= 0;
+ 	var pasivos= 2;
+ 	var defunciones= 4;
+	var myData = new Array(['Altas', altas], ['Depuracion', depuracion], ['Pasivos', pasivos], ['Defuncion', defunciones]);
+	var colors = ['#B71C1C', '#0277BD', '#EEFF41', '#4DB6AC'];
+	var myChart = new JSChart('grafica', 'bar');
+	myChart.setDataArray(myData);
+	myChart.colorizeBars(colors);
+	myChart.setTitle('Numero de pacientes');
+	myChart.setTitleColor('#8E8E8E');
+	myChart.set3D(true);
+	myChart.setAxisNameX('');
+	myChart.setAxisNameY('%');
+	myChart.setAxisColor('#C4C4C4');
+	myChart.setAxisNameFontSize(16);
+	myChart.setAxisNameColor('#999');
+	myChart.setAxisValuesColor('#7E7E7E');
+	myChart.setBarValuesColor('#7E7E7E');
+	myChart.setAxisPaddingTop(60);
+	myChart.setAxisPaddingRight(140);
+	myChart.setAxisPaddingLeft(150);
+	myChart.setAxisPaddingBottom(40);
+	myChart.setTextPaddingLeft(105);
+	myChart.setTitleFontSize(11);
+	myChart.setBarSpacingRatio(50);
+	myChart.setGrid(false);
+	myChart.setSize(616, 321);
+	myChart.draw();
+</script>
+</section>
+
+
+</div>
+
+      <div id="contenidoAbajo">
+
+      <footer>
+      <p>Derechos Reservados by Diego AND Brayan</p>
+      
+      </footer>
+      </div>
+      </div>
+    
+    
+
+  </body></html>
